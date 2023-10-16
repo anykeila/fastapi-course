@@ -9,7 +9,8 @@ from fastapi.middleware.cors import CORSMiddleware
 # models.Base.metadata.create_all(bind=engine)
 app=FastAPI()
 
-origins = ["https://www.google.com", "https://www.youtube.com"]
+# origins = ["https://www.google.com", "https://www.youtube.com"]
+origins = ["*"] # Every domain can acess our API
 
 app.add_middleware(
     CORSMiddleware, 
